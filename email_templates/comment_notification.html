@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  xmlns:v="urn:schemas-microsoft-com:vml"
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="x-apple-disable-message-reformatting" />
+    <title>Community Notifications</title>
+
+    <!--[if mso]>
+      <xml>
+        <o:OfficeDocumentSettings>
+          <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+      </xml>
+      <style>
+        table {
+          border-collapse: collapse;
+        }
+        td,
+        th,
+        div,
+        p,
+        a,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          font-family: "Segoe UI", sans-serif;
+          mso-line-height-rule: exactly;
+        }
+      </style>
+    <![endif]-->
+    <style>
+      .hover-underline:hover {
+        text-decoration: underline !important;
+      }
+      .hover-bg-blue-700:hover {
+        background-color: #2b6cb0 !important;
+      }
+      @media screen {
+        img {
+          max-width: 100%;
+        }
+        .all-font-sans {
+          font-family: -apple-system, "Segoe UI", sans-serif !important;
+        }
+      }
+      @media (max-width: 600px) {
+        u ~ div .wrapper {
+          min-width: 100vw;
+        }
+        .sm-px-24 {
+          padding-left: 24px !important;
+          padding-right: 24px !important;
+        }
+        .sm-py-32 {
+          padding-top: 32px !important;
+          padding-bottom: 32px !important;
+        }
+        .sm-w-full {
+          width: 100% !important;
+        }
+        .sm-h-full {
+          margin-top: 0px !important;
+          margin-bottom: 0px !important;
+        }
+      }
+    </style>
+  </head>
+  <body
+    style="
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      word-break: break-word;
+      -webkit-font-smoothing: antialiased;
+    "
+  >
+    <table
+      class="wrapper all-font-sans"
+      width="100%"
+      cellpadding="0"
+      cellspacing="0"
+      role="presentation"
+    >
+      <tr>
+        <td
+          align="center"
+          style="vertical-align: middle"
+          bgcolor="#edf2f7"
+          valign="middle"
+        >
+          <table
+            class="sm-w-full sm-h-full"
+            style="
+              border: 1px #80808061 solid;
+              border-radius: 8px;
+              margin-top: 40px;
+              margin-bottom: 40px;
+              overflow: hidden;
+              box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+                0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            "
+            width="600"
+            bgcolor="#f7fafc"
+            cellpadding="0"
+            cellspacing="0"
+            role="presentation"
+          >
+            <tr>
+              <td
+                style="
+                  padding-top: 20px;
+                  border-bottom: 1px #80808061 solid;
+                  padding-bottom: 20px;
+                  text-align: center;
+                "
+                bgcolor="#777777"
+                align="center"
+              >
+                <a href="{{domain}}" style="text-decoration: none">
+                  {{#logo}}
+                  <div
+                    style="
+                      width: 112px;
+                      height: 70px;
+                      margin-left: auto;
+                      margin-right: auto;
+                    "
+                  >
+                    <img
+                      src="{{.}}"
+                      style="
+                        max-width: 112px;
+                        max-height: 70px;
+                        border: 0;
+                        line-height: 100%;
+                        vertical-align: middle;
+                        object-fit: cover;
+                        background-color: #777777;
+                        border-radius: 8px;
+                        padding: 4px;
+                      "
+                      alt="Logo"
+                    />
+                  </div>
+                  {{/logo}} {{^logo}}
+                  <div style="color: white; font-size: 16px">
+                    {{../community}}
+                  </div>
+                  {{/logo}}
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td align="center" class="sm-px-24">
+                <table
+                  width="100%"
+                  cellpadding="0"
+                  cellspacing="0"
+                  role="presentation"
+                >
+                  <tr>
+                    <td
+                      class="sm-px-24"
+                      style="
+                        border-radius: 8px;
+                        padding-left: 48px;
+                        padding-right: 48px;
+                        color: #1a202c;
+                        font-size: 16px;
+                      "
+                      bgcolor="#f7fafc"
+                    >
+                      {{#each notifications}}
+                      <div style="padding-top: 20px">
+                        <p style="font-size: 14px">
+                          <a
+                            href="{{author_link}}"
+                            class="hover-underline"
+                            style="color: #4299e1; text-decoration: none"
+                            >{{author}}</a
+                          >
+                          commented on
+                          <a
+                            href="{{post_link}}"
+                            class="hover-underline"
+                            style="color: #4299e1; text-decoration: none"
+                            >{{post_title}}</a
+                          >:
+                        </p>
+                        <p
+                          style="
+                            margin-top: 6px;
+                            margin-bottom: 20px;
+                            font-size: 18px;
+                          "
+                        >
+                          {{{content}}}
+                        </p>
+                        <a
+                          href="{{link}}"
+                          class="hover-bg-blue-700"
+                          style="
+                            background-color: #4299e1;
+                            border-radius: 4px;
+                            margin-top: 10px;
+                            padding-top: 8px;
+                            padding-bottom: 8px;
+                            padding-left: 10px;
+                            padding-right: 10px;
+                            color: #ffffff;
+                            text-decoration: none;
+                          "
+                        >
+                          View/Reply
+                        </a>
+                      </div>
+                      {{/each}} {{#each chats}}
+                      <div style="padding-top: 20px">
+                        <p style="font-size: 14px">
+                          New messages from
+                          <a
+                            href="{{room_link}}"
+                            class="hover-underline"
+                            style="color: #4299e1; text-decoration: none"
+                            >{{room_name}}</a
+                          >!
+                        </p>
+                        <a
+                          href="{{room_link}}"
+                          class="hover-bg-blue-700"
+                          style="
+                            background-color: #4299e1;
+                            border-radius: 4px;
+                            margin-top: 10px;
+                            padding-top: 6px;
+                            padding-bottom: 6px;
+                            padding-left: 8px;
+                            padding-right: 8px;
+                            color: #ffffff;
+                            text-decoration: none;
+                          "
+                        >
+                          View Messages
+                        </a>
+                      </div>
+                      {{/each}}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="sm-px-24"
+                      style="
+                        padding-left: 48px;
+                        padding-right: 48px;
+                        padding-bottom: 20px;
+                        padding-top: 32px;
+                        color: #718096;
+                        font-size: 12px;
+                      "
+                    >
+                      <p style="margin: 0">
+                        You're receiving this email because you joined the
+                        <a
+                          href="{{domain}}"
+                          class="hover-underline"
+                          style="color: #4299e1; text-decoration: none"
+                          >{{community}} Community</a
+                        >
+                        which partners with
+                        <a
+                          href="https://comradery.io"
+                          class="hover-underline"
+                          style="color: #4299e1; text-decoration: none"
+                          >Comradery</a
+                        >
+                        to provide a community platform.
+                      </p>
+                      <br />
+                      <a
+                        href="{{domain}}/notification_settings"
+                        class="hover-underline"
+                        style="color: #4299e1; text-decoration: none"
+                        >Adjust Notification Settings</a
+                      >
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
